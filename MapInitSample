@@ -1,0 +1,11 @@
+Map<Id, List<Child__c>> pChildMap = new Map<Id, List<Child__c>>();
+//マップ作成
+for(Parent__c p:parentList){
+    //キー：親ID、バリュー：子のリスト
+    pChildMap.put(p.Id, p.Child__r);
+}
+
+//マップを用いて、処理する
+for(Id key : pChildMap.keySet()){
+    //pChildMap.get(key)を使って、なんかの処理
+}
